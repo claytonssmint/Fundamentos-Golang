@@ -13,6 +13,11 @@ func usuario(w http.ResponseWriter, r *http.Request) {
 	w.Write([]byte("Carregando usuários!"))
 }
 
+func nome(w http.ResponseWriter, r *http.Request) {
+	w.Write([]byte("Bootcamp Mercado Livre!"))
+
+}
+
 func main() {
 	// HTTP É UM PROTOCOLO DE COMUNICACAO - BASE DA COMUNICAÇÃO WEB
 
@@ -21,15 +26,16 @@ func main() {
 	// REQUEST - RESPONSE
 
 	// ROTAS
-		// URI - INDENTIFICADOR DO RECURSO
-		// MÉTODO - GET, POST, PUT, DELETE
-		// GET - BUSCA
-		// POST - CADASTRAR
-		// PUT ATUALIZAR DADOS
-		// DELETE - DELETAR DADOS
+	// URI - INDENTIFICADOR DO RECURSO
+	// MÉTODO - GET, POST, PUT, DELETE
+	// GET - BUSCA
+	// POST - CADASTRAR
+	// PUT ATUALIZAR DADOS
+	// DELETE - DELETAR DADOS
 
-		http.HandleFunc("/home", home)
-		http.HandleFunc("/usuario", usuario)
+	http.HandleFunc("/home", home)
+	http.HandleFunc("/usuario", usuario)
+	http.HandleFunc("/nome", nome)
 
-		log.Fatal(http.ListenAndServe(":8000", nil))
+	log.Fatal(http.ListenAndServe(":8000", nil))
 }
