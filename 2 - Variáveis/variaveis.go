@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-// Tipos de declar Variáveis
+//// TIPOS DE DECLARAR VARIÁVEIS
 func main()  {
 	var variavel1 string = "Variável 1"
 	variavel2 := "Variável 2"
